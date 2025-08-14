@@ -1,0 +1,237 @@
+/* ===== Design tokens (match your Base44 look) ===== */
+:root {
+  --bg: #eef6fb; /* soft blue page */
+  --panel: #ffffff; /* cards */
+  --ink: #0c1b2a; /* body text */
+  --muted: #5e6b7a;
+  --navy: #0b1233; /* trust navy (header/footer) */
+  --teal: #17a28b; /* primary teal */
+  --teal-2: #4cc1b2;
+  --pill: #e9f6f3; /* pale pill background */
+  --danger: #ff6b6b; /* quick exit + alert */
+  --line: #e5ecf3;
+  --shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
+  --r: 16px;
+  --max: 1100px;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 22px;
+}
+
+/* ===== Header / Nav ===== */
+.mast {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fffdd; /* fallback ignored by next line */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.mast .inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+}
+.shield {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(120deg, var(--teal), var(--teal-2));
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+}
+.navlinks {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+}
+.navlinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0d2533;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.navlinks a:hover {
+  box-shadow: var(--shadow);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #102030;
+  font-weight: 700;
+}
+.btn-pill {
+  background: var(--pill);
+}
+.btn-accent {
+  background: var(--teal);
+  color: #fff;
+  border-color: transparent;
+}
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 54px 0 40px;
+  background: #e9f2f9;
+  border-bottom: 1px solid var(--line);
+}
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 54px);
+  line-height: 1.05;
+}
+.hero .teal {
+  color: var(--teal);
+}
+.sub {
+  color: #2b3d4f;
+  opacity: 0.85;
+}
+
+/* ===== Cards / grids ===== */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.grid {
+  display: grid;
+  gap: 18px;
+}
+.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1000px) {
+  .cols-3,
+  .cols-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 680px) {
+  .cols-3,
+  .cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+.small {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+h2 {
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin: 0 0 12px;
+}
+
+/* ===== Help band ===== */
+.helpband {
+  margin-top: 26px;
+  background: #ffe7e7;
+  border: 1px solid #ffd4d4;
+  padding: 18px;
+  border-radius: 18px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  color: #2a3b4a;
+  margin-top: 32px;
+}
+.badge {
+  background: #f3f6fb;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+}
+
+/* ===== Forms ===== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+}
+
+/* ===== Discreet / Quick Exit ===== */
+body.discreet {
+  filter: grayscale(0.7) contrast(0.95);
+}
+.panic {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 80;
+}
+
+/* tiny util */
+.center {
+  text-align: center;
+}
