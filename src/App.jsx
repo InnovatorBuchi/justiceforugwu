@@ -10,61 +10,43 @@ import About from "./pages/About.jsx";
 import Journal from "./pages/Journal.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
-function goSafe() {
-  window.location.replace("https://www.google.com/weather");
-}
-
 export default function App() {
   const [discreet, setDiscreet] = useState(
     localStorage.getItem("jfu_discreet") === "1"
   );
   const location = useLocation();
+
   useEffect(() => {
     document.body.classList.toggle("discreet", discreet);
     localStorage.setItem("jfu_discreet", discreet ? "1" : "0");
   }, [discreet]);
+
   useEffect(() => {
     const onEsc = (e) => {
-      if (e.key === "Escape") goSafe();
+      if (e.key === "Escape") {
+        window.location.href = "https://www.google.com/weather";
+      }
     };
     window.addEventListener("keydown", onEsc);
     return () => window.removeEventListener("keydown", onEsc);
   }, []);
+
   const isHome = location.pathname === "/";
 
   return (
     <>
-      {/* NAV */}
       <div className="mast" role="navigation" aria-label="Primary">
         <div className="inner">
-          <div className="brand">
-            <span className="shield">✓</span> <span>Justice for Ugwu</span>
-          </div>
+          <strong>Justice For Ugwu</strong>
           <nav className="navlinks">
-            <Link to="/">
-              <span>🏠</span> Home
-            </Link>
-            <Link to="/explain">
-              <span>💬</span> What Is Trauma?
-            </Link>
-            <Link to="/identify">
-              <span>🛡️</span> Check Yourself
-            </Link>
-            <Link to="/check-in">
-              <span>💗</span> How Are You?
-            </Link>
-            <Link to="/report">
-              <span>📝</span> Report Tool
-            </Link>
-            <Link to="/locker">
-              <span>🗂️</span> Evidence Vault
-            </Link>
-            <Link to="/about">
-              <span>📖</span> My Story
-            </Link>
-            <Link to="/journal">
-              <span>🗒️</span> Journal
-            </Link>
+            <Link to="/">Home</Link>
+            <Link to="/explain">Understand Trauma</Link>
+            <Link to="/identify">Identify Risk</Link>
+            <Link to="/check-in">Check-In</Link>
+            <Link to="/report">Witness Prep</Link>
+            <Link to="/locker">Evidence Vault</Link>
+            <Link to="/about">About</Link>
+            <Link to="/journal">Journal</Link>
           </nav>
           <label
             className="small"
@@ -82,53 +64,27 @@ export default function App() {
             />{" "}
             Discreet
           </label>
-          <button className="btn btn-danger" onClick={goSafe}>
+          <a
+            className="btn btn-danger"
+            href="https://www.google.com/weather"
+            rel="noopener"
+          >
             Quick Exit
-          </button>
+          </a>
         </div>
       </div>
 
-      {/* HERO (home only) */}
-      {isHome && (
+      {isHome ? (
         <header className="hero">
-          <div className="wrap center">
-            <h1>
-              <span style={{ fontWeight: 800 }}>Justice For Ugwu:</span>
-              <br />
-              <span className="teal" style={{ fontWeight: 800 }}>
-                A Survivor's Platform for Truth and Tools
-              </span>
-            </h1>
-            <p className="sub">
-              “I was trafficked. I was erased. I fought back—with proof.”
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: 12,
-                flexWrap: "wrap",
-                justifyContent: "center",
-                marginTop: 12,
-              }}
-            >
-              <Link className="btn btn-accent" to="/identify">
-                🛡️ Identify Risk
-              </Link>
-              <Link className="btn btn-pill" to="/explain">
-                💬 Understand Trauma
-              </Link>
-              <Link className="btn btn-pill" to="/locker">
-                🗂️ View My Case File
-              </Link>
-            </div>
+          <div className="wrap">
+            <Home />
           </div>
         </header>
-      )}
+      ) : null}
 
-      {/* ROUTES */}
       <main className="wrap">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={null} />
           <Route path="/explain" element={<Explain />} />
           <Route path="/identify" element={<Identify />} />
           <Route path="/check-in" element={<CheckIn />} />
@@ -140,8 +96,14 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* FOOTER */}
-      <footer>
+      <footer
+        style={{
+          background: "#0B1233",
+          color: "#cbd5ff",
+          marginTop: 40,
+          borderTop: "1px solid #1b255a",
+        }}
+      >
         <div
           className="wrap"
           style={{
@@ -152,31 +114,28 @@ export default function App() {
             alignItems: "center",
           }}
         >
-          <div className="small">
-            This site does not track or advertise. It exists to empower and
-            protect.
+          <div>
+            <strong>Justice For Ugwu</strong>
+            <br />
+            <span className="small">Built to educate, equip, and empower.</span>
           </div>
           <div className="badge">
             Press <strong>Esc</strong> for Quick Exit
           </div>
-        </div>
-        <div className="wrap center small" style={{ paddingBottom: 18 }}>
-          <a href="/">Start Here</a> · <a href="/report">Contact</a> ·{" "}
-          <a href="/check-in">Emergency: Text 741741 | Call 988</a>
-          <div style={{ marginTop: 16, opacity: 0.7 }}>
-            "Trauma doesn't define you. Truth empowers you. Justice heals
-            communities."
+          <div className="badge">
+            Built by Onyebuchi Michael Ugwu — Survivor. Analyst. Witness.
           </div>
         </div>
       </footer>
 
-      <button
+      <a
         className="btn btn-danger panic"
-        onClick={goSafe}
+        href="https://www.google.com/weather"
+        rel="noopener"
         aria-label="Quick Exit"
       >
         Quick Exit
-      </button>
+      </a>
     </>
   );
 }
