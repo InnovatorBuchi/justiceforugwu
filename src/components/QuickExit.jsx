@@ -1,6 +1,8 @@
-import QuickExit from "./components/QuickExit.jsx";
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
+
+import QuickExit from "./components/QuickExit.jsx";
+
 import Home from "./pages/Home.jsx";
 import Explain from "./pages/Explain.jsx";
 import Identify from "./pages/Identify.jsx";
@@ -17,25 +19,17 @@ export default function App() {
   );
   const location = useLocation();
 
+  // Persist Discreet Mode
   useEffect(() => {
     document.body.classList.toggle("discreet", discreet);
     localStorage.setItem("jfu_discreet", discreet ? "1" : "0");
   }, [discreet]);
 
-  useEffect(() => {
-    const onEsc = (e) => {
-      if (e.key === "Escape") {
-        window.location.href = "https://www.google.com/weather";
-      }
-    };
-    window.addEventListener("keydown", onEsc);
-    return () => window.removeEventListener("keydown", onEsc);
-  }, []);
-
   const isHome = location.pathname === "/";
 
   return (
     <>
+      {/* NAV */}
       <div className="mast" role="navigation" aria-label="Primary">
         <div className="inner">
           <strong>Justice For Ugwu</strong>
@@ -49,6 +43,7 @@ export default function App() {
             <Link to="/about">About</Link>
             <Link to="/journal">Journal</Link>
           </nav>
+
           <label
             className="small"
             style={{
@@ -65,10 +60,13 @@ export default function App() {
             />{" "}
             Discreet
           </label>
+
+          {/* Hard external navigation; cannot be intercepted by the router */}
           <QuickExit />
         </div>
       </div>
 
+      {/* HERO (home only) */}
       {isHome ? (
         <header className="hero">
           <div className="wrap">
@@ -77,6 +75,7 @@ export default function App() {
         </header>
       ) : null}
 
+      {/* ROUTES */}
       <main className="wrap">
         <Routes>
           <Route path="/" element={null} />
@@ -91,6 +90,7 @@ export default function App() {
         </Routes>
       </main>
 
+      {/* FOOTER */}
       <footer
         style={{
           background: "#0B1233",
@@ -123,14 +123,8 @@ export default function App() {
         </div>
       </footer>
 
-      <a
-        className="btn btn-danger panic"
-        href="https://www.google.com/weather"
-        rel="noopener"
-        aria-label="Quick Exit"
-      >
-        Quick Exit
-      </a>
+      {/* Floating Quick Exit */}
+      <QuickExit className="panic" />
     </>
   );
 }
