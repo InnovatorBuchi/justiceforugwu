@@ -6,11 +6,11 @@
 
   <title>Justice For Ugwu — A Survivor's Platform for Truth and Tools</title>
 
-  <!-- Favicon (you currently keep assets in /Public) -->
+  <!-- Favicon (your repo uses /Public) -->
   <link rel="icon" href="/Public/favicon.ico" />
 
-  <!-- Basic meta -->
-  <meta name="theme-color" content="#13b8a6">
+  <!-- Basic theme color -->
+  <meta name="theme-color" content="#13b8a6" />
 
   <style>
     :root{
@@ -19,7 +19,8 @@
       --shadow:0 8px 28px rgba(16,24,40,.10);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:20px}
 
@@ -61,7 +62,7 @@
     .video:before{content:"";display:block;padding-top:56.25%}
     .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}
 
-    /* Appeal + Help */
+    /* Panels */
     .panel{background:#fff;border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:26px 0}
     .help{background:var(--danger);border:1px solid #f7b9b9}
 
@@ -77,19 +78,19 @@
     <div class="row wrap">
       <div class="brand"><span class="shield" aria-hidden="true"></span> Justice for Ugwu</div>
       <div style="display:flex;gap:10px;align-items:center">
-        <a class="nav-link" href="https://tools.justiceforugwu.org/#contact" style="font-weight:700">Discreet</a>
+        <a class="nav-link" href="https://tools.justiceforugwu.org#contact" style="font-weight:700">Discreet</a>
         <button class="quick-exit" onclick="(function(){try{location.replace('https://www.weather.com/')}catch(e){location.href='https://www.weather.com/'}})()">Quick Exit</button>
       </div>
     </div>
     <nav class="nav wrap" aria-label="Primary">
-      <a href="/#home">Home</a>
-      <a href="https://tools.justiceforugwu.org/#trauma">What Is Trauma?</a>
-      <a href="https://tools.justiceforugwu.org/#safety">Check Yourself</a>
-      <a href="https://tools.justiceforugwu.org/#howareyou">How Are You?</a>
-      <a href="https://tools.justiceforugwu.org/#report">Report Tool</a>
-      <a href="https://tools.justiceforugwu.org/#evidence">Evidence Vault</a>
-      <a href="/#story">My Story</a>
-      <a href="https://tools.justiceforugwu.org/#journal">Journal</a>
+      <a href="#home">Home</a>
+      <a href="https://tools.justiceforugwu.org#trauma">What Is Trauma?</a>
+      <a href="https://tools.justiceforugwu.org#safety">Check Yourself</a>
+      <a href="https://tools.justiceforugwu.org#risk">How Are You?</a>
+      <a href="https://tools.justiceforugwu.org#report">Report Tool</a>
+      <a href="https://tools.justiceforugwu.org#evidence">Evidence Vault</a>
+      <a href="#story">My Story</a>
+      <a href="https://tools.justiceforugwu.org#journal">Journal</a>
     </nav>
   </div>
 
@@ -99,9 +100,9 @@
       <h1>Justice For Ugwu:<br/>A Survivor's Platform for Truth and Tools</h1>
       <p class="sub">“I was trafficked. I was erased. I fought back—with proof.”</p>
       <div class="cta-row">
-        <a class="btn btn-case" href="https://tools.justiceforugwu.org/#evidence">View My Case File</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org/#risk">Identify Risk</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org/#trauma">Understand Trauma</a>
+        <a class="btn btn-case"   href="https://tools.justiceforugwu.org#case">View My Case File</a>
+        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#risk">Identify Risk</a>
+        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#trauma">Understand Trauma</a>
       </div>
     </section>
 
@@ -109,9 +110,13 @@
     <h2 class="section-title" id="story">My Story: From Survivor to Advocate</h2>
     <div class="video-card">
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/bFMg-sz_nss?si=DkLaIeVIBGRXDqGg"
-          title="Justice For Ugwu — video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/bFMg-sz_nss?si=DkLaIeVIBGRXDqGg"
+          title="Justice For Ugwu — video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
@@ -121,22 +126,22 @@
       <article class="card">
         <div class="pill">• Trauma Screener</div>
         <h3>Confidential self-assessment to understand your experiences</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org/#trauma-screener">Take Assessment</a>
+        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#trauma-screener">Take Assessment</a>
       </article>
       <article class="card">
         <div class="pill">• Safety Check-In</div>
         <h3>Quick, safe way to assess how you're feeling right now</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org/#safety">Check In Now</a>
+        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#safety">Check In Now</a>
       </article>
       <article class="card">
         <div class="pill">• Report Builder</div>
         <h3>Organize your story in a trauma-informed way</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org/#report">Start Report</a>
+        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#report">Start Report</a>
       </article>
       <article class="card">
         <div class="pill">• Private Journal</div>
         <h3>Safe space for your thoughts (stored locally only)</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org/#journal">Open Journal</a>
+        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#journal">Open Journal</a>
       </article>
     </div>
 
@@ -151,9 +156,9 @@
         <li><strong>FBI (USA)</strong> — labor/sex trafficking investigations in the U.S.</li>
       </ul>
       <div class="cta-row" style="margin-top:8px">
-        <a class="btn btn-case" href="https://tools.justiceforugwu.org/#evidence">Open Case File</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org/#evidence">Evidence Hub</a>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org/#contact">Secure Contact</a>
+        <a class="btn btn-case"   href="https://tools.justiceforugwu.org#case">Open Case File</a>
+        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#evidence">Evidence Hub</a>
+        <a class="btn btn-ghost"  href="https://tools.justiceforugwu.org#contact">Secure Contact</a>
       </div>
     </section>
 
@@ -178,8 +183,8 @@
       <div class="hr"></div>
       <p>This site does not track or advertise. It exists to empower and protect.</p>
       <div class="links">
-        <a href="https://tools.justiceforugwu.org/#start">Start Here</a>
-        <a href="https://tools.justiceforugwu.org/#contact">Contact</a>
+        <a href="#home">Start Here</a>
+        <a href="https://tools.justiceforugwu.org#contact">Contact</a>
       </div>
       <p style="margin-top:8px;color:#7aa7c7">"Trauma doesn't define you. Truth empowers you. Justice heals communities."</p>
     </footer>
