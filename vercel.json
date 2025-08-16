@@ -4,7 +4,7 @@
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/app/(.*)", "dest": "https://base44.app/$1" },
+    { "src": "/app/(.*)", "dest": "https://tools.justiceforugwu.org/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
