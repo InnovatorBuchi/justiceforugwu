@@ -3,15 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Justice For Ugwu — A Survivor's Platform for Truth and Tools</title>
-
-  <!-- Favicon (your repo uses /Public) -->
   <link rel="icon" href="/Public/favicon.ico" />
-
-  <!-- Basic theme color -->
   <meta name="theme-color" content="#13b8a6" />
-
   <style>
     :root{
       --bg:#f6fbfe; --panel:#ffffff; --text:#0b2239; --muted:#5b7288;
@@ -19,6 +13,7 @@
       --shadow:0 8px 28px rgba(16,24,40,.10);
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
     a{color:inherit;text-decoration:none}
@@ -32,8 +27,8 @@
     .shield:after{content:"";position:absolute;inset:4px;border-radius:4px;background:var(--brand)}
     .quick-exit{background:var(--case);color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer}
     .nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;padding:6px 10px;border-top:1px solid var(--stroke)}
-    .nav a{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:#fff;font-weight:600}
-    .nav a:hover{filter:brightness(.98)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:#fff;font-weight:600}
+    .chip:hover{filter:brightness(.98)}
 
     /* Hero */
     .hero{margin:24px 0;background:linear-gradient(180deg,#eaf6ff,#ecfbf8);border:1px solid var(--stroke);border-radius:24px;box-shadow:var(--shadow);padding:32px 22px;text-align:center}
@@ -66,6 +61,11 @@
     .panel{background:#fff;border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:26px 0}
     .help{background:var(--danger);border:1px solid #f7b9b9}
 
+    /* Tools sections on tools subdomain */
+    .tool-section{scroll-margin-top:90px;background:#fff;border:1px solid var(--stroke);border-radius:16px;box-shadow:var(--shadow);padding:18px;margin:24px 0}
+    .tool-section h2{margin:0 0 10px}
+    .muted{color:#5b7288}
+
     /* Footer */
     footer{padding:28px 0 40px;text-align:center;color:#0f766e}
     footer .links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
@@ -78,19 +78,19 @@
     <div class="row wrap">
       <div class="brand"><span class="shield" aria-hidden="true"></span> Justice for Ugwu</div>
       <div style="display:flex;gap:10px;align-items:center">
-        <a class="nav-link" href="https://tools.justiceforugwu.org#contact" style="font-weight:700">Discreet</a>
+        <a class="chip" data-target="contact"><strong>Discreet</strong></a>
         <button class="quick-exit" onclick="(function(){try{location.replace('https://www.weather.com/')}catch(e){location.href='https://www.weather.com/'}})()">Quick Exit</button>
       </div>
     </div>
     <nav class="nav wrap" aria-label="Primary">
-      <a href="#home">Home</a>
-      <a href="https://tools.justiceforugwu.org#trauma">What Is Trauma?</a>
-      <a href="https://tools.justiceforugwu.org#safety">Check Yourself</a>
-      <a href="https://tools.justiceforugwu.org#risk">How Are You?</a>
-      <a href="https://tools.justiceforugwu.org#report">Report Tool</a>
-      <a href="https://tools.justiceforugwu.org#evidence">Evidence Vault</a>
-      <a href="#story">My Story</a>
-      <a href="https://tools.justiceforugwu.org#journal">Journal</a>
+      <a class="chip" href="#home">Home</a>
+      <a class="chip" data-target="trauma">What Is Trauma?</a>
+      <a class="chip" data-target="safety">Check Yourself</a>
+      <a class="chip" data-target="risk">How Are You?</a>
+      <a class="chip" data-target="report">Report Tool</a>
+      <a class="chip" data-target="evidence">Evidence Vault</a>
+      <a class="chip" href="#story">My Story</a>
+      <a class="chip" data-target="journal">Journal</a>
     </nav>
   </div>
 
@@ -100,9 +100,9 @@
       <h1>Justice For Ugwu:<br/>A Survivor's Platform for Truth and Tools</h1>
       <p class="sub">“I was trafficked. I was erased. I fought back—with proof.”</p>
       <div class="cta-row">
-        <a class="btn btn-case"   href="https://tools.justiceforugwu.org#case">View My Case File</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#risk">Identify Risk</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#trauma">Understand Trauma</a>
+        <a class="btn btn-case"   data-target="case">View My Case File</a>
+        <a class="btn btn-outline" data-target="risk">Identify Risk</a>
+        <a class="btn btn-outline" data-target="trauma">Understand Trauma</a>
       </div>
     </section>
 
@@ -115,33 +115,32 @@
           title="Justice For Ugwu — video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+          allowfullscreen></iframe>
       </div>
     </div>
 
-    <!-- TOOLS -->
+    <!-- TOOLS PROMOS -->
     <h2 class="section-title">Tools for Survivors and Supporters</h2>
     <div class="grid">
       <article class="card">
         <div class="pill">• Trauma Screener</div>
         <h3>Confidential self-assessment to understand your experiences</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#trauma-screener">Take Assessment</a>
+        <a class="btn btn-ghost" data-target="trauma-screener">Take Assessment</a>
       </article>
       <article class="card">
         <div class="pill">• Safety Check-In</div>
         <h3>Quick, safe way to assess how you're feeling right now</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#safety">Check In Now</a>
+        <a class="btn btn-ghost" data-target="safety">Check In Now</a>
       </article>
       <article class="card">
         <div class="pill">• Report Builder</div>
         <h3>Organize your story in a trauma-informed way</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#report">Start Report</a>
+        <a class="btn btn-ghost" data-target="report">Start Report</a>
       </article>
       <article class="card">
         <div class="pill">• Private Journal</div>
         <h3>Safe space for your thoughts (stored locally only)</h3>
-        <a class="btn btn-ghost" href="https://tools.justiceforugwu.org#journal">Open Journal</a>
+        <a class="btn btn-ghost" data-target="journal">Open Journal</a>
       </article>
     </div>
 
@@ -156,9 +155,9 @@
         <li><strong>FBI (USA)</strong> — labor/sex trafficking investigations in the U.S.</li>
       </ul>
       <div class="cta-row" style="margin-top:8px">
-        <a class="btn btn-case"   href="https://tools.justiceforugwu.org#case">Open Case File</a>
-        <a class="btn btn-outline" href="https://tools.justiceforugwu.org#evidence">Evidence Hub</a>
-        <a class="btn btn-ghost"  href="https://tools.justiceforugwu.org#contact">Secure Contact</a>
+        <a class="btn btn-case"   data-target="case">Open Case File</a>
+        <a class="btn btn-outline" data-target="evidence">Evidence Hub</a>
+        <a class="btn btn-ghost"  data-target="contact">Secure Contact</a>
       </div>
     </section>
 
@@ -166,17 +165,54 @@
     <section class="panel help" aria-labelledby="helpNow">
       <h2 id="helpNow" class="section-title" style="margin-top:0;color:#991b1b">Need Help Right Now?</h2>
       <div class="grid">
-        <div class="card" style="border-color:#f4caca">
-          <b>Crisis Text Line</b><br/>Text <b>HOME</b> to <b>741741</b>
-        </div>
-        <div class="card" style="border-color:#f4caca">
-          <b>Suicide & Crisis Lifeline</b><br/>Call or Text <b>988</b>
-        </div>
-        <div class="card" style="border-color:#f4caca">
-          <b>Human Trafficking Hotline</b><br/><b>1-888-373-7888</b>
-        </div>
+        <div class="card" style="border-color:#f4caca"><b>Crisis Text Line</b><br/>Text <b>HOME</b> to <b>741741</b></div>
+        <div class="card" style="border-color:#f4caca"><b>Suicide & Crisis Lifeline</b><br/>Call or Text <b>988</b></div>
+        <div class="card" style="border-color:#f4caca"><b>Human Trafficking Hotline</b><br/><b>1-888-373-7888</b></div>
       </div>
     </section>
+
+    <!-- ===== TOOLS SECTIONS (exist on tools.justiceforugwu.org) ===== -->
+    <section id="case" class="tool-section">
+      <h2>My Case File</h2>
+      <p class="muted">Central place to view/share case materials. Replace this with your secure viewer when ready.</p>
+      <p><a class="btn btn-outline" href="https://app--audit-selfietm-4b2b6185.base44.app" target="_blank" rel="noopener">Open Secure Viewer (demo)</a></p>
+    </section>
+
+    <section id="risk" class="tool-section">
+      <h2>Identify Risk</h2>
+      <p class="muted">Quick check-in for safety and risk.</p>
+    </section>
+
+    <section id="trauma" class="tool-section">
+      <h2>Understand Trauma</h2>
+      <p class="muted">Short guides and resources.</p>
+    </section>
+
+    <section id="report" class="tool-section">
+      <h2>Report Tool</h2>
+      <p class="muted">Create a structured, trauma-informed report.</p>
+    </section>
+
+    <section id="evidence" class="tool-section">
+      <h2>Evidence Vault</h2>
+      <p class="muted">Keep documents and media organized.</p>
+    </section>
+
+    <section id="journal" class="tool-section">
+      <h2>Private Journal</h2>
+      <p class="muted">Local-only notes area (can be enhanced later).</p>
+    </section>
+
+    <section id="start" class="tool-section">
+      <h2>Start Here</h2>
+      <p class="muted">How to use these tools safely.</p>
+    </section>
+
+    <section id="contact" class="tool-section">
+      <h2>Contact</h2>
+      <p class="muted">Email: support@justiceforugwu.org</p>
+    </section>
+    <!-- ===== END TOOLS SECTIONS ===== -->
 
     <!-- FOOTER -->
     <footer>
@@ -184,10 +220,22 @@
       <p>This site does not track or advertise. It exists to empower and protect.</p>
       <div class="links">
         <a href="#home">Start Here</a>
-        <a href="https://tools.justiceforugwu.org#contact">Contact</a>
+        <a data-target="contact">Contact</a>
       </div>
       <p style="margin-top:8px;color:#7aa7c7">"Trauma doesn't define you. Truth empowers you. Justice heals communities."</p>
     </footer>
   </div>
+
+  <!-- Link normalizer: main site -> tools subdomain; tools subdomain -> local #id -->
+  <script>
+    (function () {
+      const onTools = location.hostname.startsWith('tools.');
+      const base = 'https://tools.justiceforugwu.org#';
+      document.querySelectorAll('[data-target]').forEach(a => {
+        const id = a.getAttribute('data-target');
+        a.setAttribute('href', onTools ? `#${id}` : `${base}${id}`);
+      });
+    })();
+  </script>
 </body>
 </html>
