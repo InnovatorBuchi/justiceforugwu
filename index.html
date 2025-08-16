@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -10,4 +11,241 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+=======
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Justice For Ugwu — A Survivor's Platform for Truth and Tools</title>
+
+  <!-- Core SEO -->
+  <link rel="canonical" href="https://justiceforugwu.org/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="description" content="Justice for Ugwu — survivor-led evidence of cross-border human trafficking and related financial abuse. Urgent appeal to NAPTIP, EFCC, HSI, and FBI for independent inquiry. Tracker-free, trauma-informed tools and case file.">
+  <meta name="keywords" content="human trafficking, cross-border trafficking, survivor platform, NAPTIP, EFCC, HSI, FBI, evidence, case file, Nigeria, United States">
+  <meta name="theme-color" content="#13b8a6">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Justice For Ugwu">
+  <meta property="og:title" content="Justice For Ugwu — A Survivor's Platform for Truth and Tools">
+  <meta property="og:description" content="Survivor-led evidence, timeline, and tools. Urgent appeal to NAPTIP, EFCC, HSI, and FBI for independent action.">
+  <meta property="og:url" content="https://justiceforugwu.org/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Justice For Ugwu — A Survivor's Platform for Truth and Tools">
+  <meta name="twitter:description" content="Evidence-backed appeal to NAPTIP, EFCC, HSI, and FBI. Tools for survivors, public case file, no ads, no tracking.">
+
+  <style>
+    :root{
+      --bg:#f6fbfe; --panel:#ffffff; --text:#0b2239; --muted:#5b7288;
+      --brand:#13b8a6; --stroke:#e6eef4;
+      --danger:#fce7e7; --card-shadow:0 6px 18px rgba(16,24,40,.06);
+      --casefile:#ef3b3b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:20px}
+
+    /* topbar */
+    .topbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--stroke)}
+    .topbar .in{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .shield{width:20px;height:20px;border-radius:6px;border:2px solid var(--brand);display:inline-block;position:relative}
+    .shield:after{content:"";position:absolute;inset:4px;border-radius:4px;background:var(--brand)}
+    .quick-exit{background:#ef3b3b;color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:700;box-shadow:var(--card-shadow);cursor:pointer}
+    .quick-exit:active{transform:translateY(1px)}
+
+    /* badges row */
+    .badges{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;padding:10px 0;color:#778da3}
+    .badge{width:20px;height:20px;border-radius:6px;border:1px solid #cfdbe5;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+
+    /* hero */
+    .hero{padding:28px 20px;margin:16px auto;background:linear-gradient(180deg,#eaf6ff,#ecfbf8);border-radius:24px;box-shadow:var(--card-shadow);text-align:center}
+    .hero h1{font-size:28px;line-height:1.2;margin:0 0 8px}
+    .hero h1 .accent{color:#1a998d}
+    .hero p.sub{margin:4px 0 18px;color:var(--muted);font-weight:600}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-outline{background:#fff;border-color:#cfe9e6}
+    .btn-ghost{background:#fff;border-color:var(--stroke)}
+    .btn-casefile{background:var(--casefile);color:#fff;padding:14px 22px;font-size:18px}
+    .btn:active{transform:translateY(1px)}
+
+    /* fallback fix if "btn" is forgotten */
+    .btn-outline, .btn-casefile { display:inline-flex; align-items:center; justify-content:center; }
+
+    /* section title */
+    .section-title{font-size:24px;font-weight:800;margin:28px 0 12px;text-align:center}
+
+    /* grid */
+    .grid{display:grid;gap:16px}
+    @media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:var(--panel);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--card-shadow);padding:18px}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0 0 14px;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#f4faff;border:1px solid #d9e9f7;color:#1d4e7a;border-radius:999px;padding:10px 14px;font-weight:700}
+    .icon-dot{width:12px;height:12px;border-radius:50%;background:#7aa7c7}
+
+    /* content panels */
+    .why{background:linear-gradient(180deg,#f7fcff,#f3fbf7);border-radius:18px;padding:22px;border:1px solid var(--stroke);box-shadow:var(--card-shadow);margin:26px 0}
+    .why h2{margin:0 0 10px}
+    .why p{margin:0;color:var(--muted)}
+    .appeal{background:#fff;border:1px solid var(--stroke);border-radius:18px;padding:22px;box-shadow:var(--card-shadow);margin:26px 0}
+    .appeal h2{margin:0 0 10px}
+    .appeal p{margin:6px 0;color:var(--muted)}
+    .appeal ul{padding-left:18px;margin:8px 0}
+    .appeal li{margin:6px 0}
+
+    /* help panel */
+    .help{background:var(--danger);border:1px solid #f7b9b9;border-radius:18px;padding:18px;box-shadow:var(--card-shadow);margin:20px 0}
+    .help h3{margin:0 0 12px;color:#991b1b;font-size:22px}
+    .help .row{display:grid;gap:12px}
+    @media(min-width:680px){.help .row{grid-template-columns:repeat(3,1fr)}}
+    .help .tile{background:#fff;border:1px solid #f4caca;border-radius:14px;padding:14px;box-shadow:var(--card-shadow)}
+    .help .tile b{color:#a11a1a}
+
+    /* footer */
+    footer{padding:26px 0 50px;color:#58cfc3;text-align:center}
+    footer .links{display:flex;gap:18px;justify-content:center;margin:8px 0 6px;flex-wrap:wrap}
+    footer .links a{font-weight:700}
+    footer .em{color:#3aaea1}
+    hr{border:none;border-top:1px solid var(--stroke);margin:18px 0}
+    .sr-only{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+    /* video embed */
+    .video { position:relative; width:100%; max-width:900px; margin:20px auto; }
+    .video::before { content:""; display:block; padding-top:56.25%; } /* 16:9 ratio */
+    .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:14px; box-shadow:0 6px 18px rgba(16,24,40,.06); }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="in wrap" style="padding-left:20px;padding-right:20px">
+      <div class="brand">
+        <span class="shield" aria-hidden="true"></span>
+        <span>JFU</span>
+      </div>
+      <button class="quick-exit" onclick="quickExit()" aria-label="Quick Exit">Quick Exit</button>
+    </div>
+  </div>
+
+  <!-- tiny badges row -->
+  <div class="badges">
+    <span class="badge" aria-hidden="true"></span>
+    <span class="badge" aria-hidden="true"></span>
+    <span class="badge" aria-hidden="true"></span>
+    <span class="badge" aria-hidden="true"></span>
+    <span class="badge" aria-hidden="true"></span>
+    <span class="badge" aria-hidden="true"></span>
+  </div>
+
+  <!-- HERO -->
+  <div class="wrap">
+    <section class="hero" id="home">
+      <h1>Justice For Ugwu:<br> <span class="accent">A Survivor's Platform for Truth and Tools</span></h1>
+      <p class="sub">“I was trafficked. I was erased. I fought back—with proof.”</p>
+      <div class="cta-row">
+        <a class="btn btn-casefile" href="/app#case">View My Case File</a>
+        <a class="btn btn-outline" href="/app#risk">Identify Risk</a>
+        <a class="btn btn-outline" href="/app#trauma">Understand Trauma</a>
+      </div>
+    </section>
+
+    <!-- My Story video -->
+    <h2 class="section-title">My Story: From Survivor to Advocate</h2>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/bFMg-sz_nss?si=DkLaIeVIBGRXDqGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Tools cards -->
+    <h2 class="section-title">Tools for Survivors and Supporters</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="pill"><span class="icon-dot"></span> Trauma Screener</div>
+        <h3>Confidential self-assessment to understand your experiences</h3>
+        <a class="btn btn-ghost" href="/app#trauma-screener">Take Assessment</a>
+      </article>
+      <article class="card">
+        <div class="pill"><span class="icon-dot"></span> Safety Check-In</div>
+        <h3>Quick, safe way to assess how you're feeling right now</h3>
+        <a class="btn btn-ghost" href="/app#safety">Check In Now</a>
+      </article>
+      <article class="card">
+        <div class="pill"><span class="icon-dot"></span> Report Builder</div>
+        <h3>Organize your story in a trauma-informed way</h3>
+        <a class="btn btn-ghost" href="/app#report">Start Report</a>
+      </article>
+      <article class="card">
+        <div class="pill"><span class="icon-dot"></span> Private Journal</div>
+        <h3>Safe space for your thoughts (stored locally only)</h3>
+        <a class="btn btn-ghost" href="/app#journal">Open Journal</a>
+      </article>
+    </div>
+
+    <!-- Why panel -->
+    <section class="why">
+      <h2>Why This Platform Exists</h2>
+      <p><strong>“Built by a survivor to make sure no one is ever erased again.”</strong></p>
+      <p>Every tool, every word, every feature on this platform comes from lived experience. This is what I needed when I was fighting to be seen, to be heard, to be believed.</p>
+    </section>
+
+    <!-- Urgent Appeal -->
+    <section class="appeal" aria-labelledby="appeal">
+      <h2 id="appeal">Urgent Appeal to Authorities</h2>
+      <p>This site presents survivor-controlled evidence for an independent, trauma-informed review by the following agencies. It is tracker-free and ad-free so investigators, journalists, and the public can verify materials without barriers.</p>
+      <ul>
+        <li><strong>NAPTIP (Nigeria):</strong> mandated to investigate and prosecute trafficking offenses and coordinate victim services nationwide.</li>
+        <li><strong>EFCC (Nigeria):</strong> empowered to investigate financial crimes, asset diversion, and related fraud.</li>
+        <li><strong>HSI (USA):</strong> Homeland Security Investigations leads cross-border trafficking cases.</li>
+        <li><strong>FBI (USA):</strong> investigates labor and sex trafficking in the U.S.</li>
+      </ul>
+      <div class="cta-row" style="margin-top:10px">
+        <a class="btn btn-casefile" href="/app#case">Open Case File</a>
+        <a class="btn btn-outline" href="/app#evidence">Evidence Hub</a>
+        <a class="btn btn-outline" href="/app#contact">Secure Contact</a>
+      </div>
+    </section>
+
+    <!-- Help panel -->
+    <section class="help" aria-labelledby="helpNow">
+      <h3 id="helpNow">Need Help Right Now?</h3>
+      <div class="row">
+        <div class="tile"><b>Crisis Text Line</b><br>Text <b>HOME</b> to <b>741741</b></div>
+        <div class="tile"><b>Suicide Prevention</b><br>Call or Text <b>988</b></div>
+        <div class="tile"><b>Human Trafficking</b><br><b>1-888-373-7888</b></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>This site does not track or advertise. It exists to empower and protect.</p>
+      <div class="links">
+        <a href="/app#start">Start Here</a>
+        <a href="/app#contact">Contact</a>
+      </div>
+      <p class="em">Emergency: Text 741741 | Call 988</p>
+      <hr>
+      <p style="color:#7aa7c7">"Trauma doesn't define you. Truth empowers you. Justice heals communities."</p>
+    </footer>
+  </div>
+
+  <noscript>
+    <div class="wrap" style="margin-top:10px">
+      <div class="card">
+        <p><strong>Note:</strong> This landing page works without JavaScript. Interactive tools live under <a href="/app">/app</a>.</p>
+      </div>
+    </div>
+  </noscript>
+
+  <script>
+    function quickExit(){
+      try { window.location.replace('https://www.weather.com/'); }
+      catch(e){ window.location.href='https://www.weather.com/'; }
+    }
+  </script>
+</body>
 </html>
