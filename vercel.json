@@ -1,8 +1,16 @@
 {
   "trailingSlash": false,
   "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ],
   "rewrites": [
-    { "source": "/app", "destination": "https://tools.justiceforugwu.org/" },
-    { "source": "/app/:path*", "destination": "https://tools.justiceforugwu.org/:path*" }
+    { "source": "/viewer",      "destination": "https://app--justice-for-ugwu-41980093.base44.app" },
+    { "source": "/viewer/(.*)", "destination": "https://app--justice-for-ugwu-41980093.base44.app/$1" }
   ]
 }
