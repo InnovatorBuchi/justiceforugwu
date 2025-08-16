@@ -1,10 +1,8 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/app/(.*)", "dest": "https://tools.justiceforugwu.org/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/app", "destination": "https://tools.justiceforugwu.org/" },
+    { "source": "/app/:path*", "destination": "https://tools.justiceforugwu.org/:path*" }
   ]
 }
