@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/vault",
-      "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker",
-      "permanent": false
-    }
-  ]
-}
