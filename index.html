@@ -1,319 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Justice for Ugwu — Public Evidence Hub</title>
-  <meta name="description" content="I was trafficked out of Nigeria through estate fraud and forgery, and the crime continued in the United States. This public evidence hub documents the timeline, exhibits, and a formal petition calling on NAPTIP, EFCC, HSI, and the FBI to act.">
-
-  <!-- Canonical / Robots -->
-  <link rel="canonical" href="https://justiceforugwu.org/">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Justice for Ugwu — Public Evidence Hub">
-  <meta property="og:description" content="Crime began in Nigeria (estate fraud/forgery), continued in the U.S. This is my public record. Evidence, timeline, and petition for NAPTIP, EFCC, HSI, FBI.">
-  <meta property="og:url" content="https://justiceforugwu.org/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://justiceforugwu.org/og-card.jpg">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Justice for Ugwu — Public Evidence Hub">
-  <meta name="twitter:description" content="Crime began in Nigeria; continued in the U.S. Evidence that compels action from NAPTIP, EFCC, HSI, FBI.">
-  <meta name="twitter:image" content="https://justiceforugwu.org/og-card.jpg">
-
-  <!-- JSON-LD (Website + Person) -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Justice for Ugwu","url":"https://justiceforugwu.org/","description":"Public evidence hub documenting cross-border trafficking that began in Nigeria and continued in the U.S."}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Onyebuchi Michael Ugwu","url":"https://justiceforugwu.org/"}
-  </script>
-
-  <!-- Styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justice For Ugwu</title>
   <style>
-    :root{
-      --bg:#0b0c10;--panel:rgba(255,255,255,.06);--txt:#eef2f7;--muted:#b9c2cf;
-      --accent:#6ee7ff;--accent2:#b388ff;--ok:#8ef0b6;--warn:#ffd479;
-      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      color: #111;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html,body{
-      margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--txt);
-      background:radial-gradient(1200px 600px at 10% -20%,rgba(110,231,255,.12),transparent),
-                 linear-gradient(180deg,rgba(179,136,255,.08),transparent 40%),var(--bg);
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{position:sticky;top:0;backdrop-filter:blur(10px);
-      background:linear-gradient(180deg,rgba(10,10,15,.8),rgba(10,10,15,.5));border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
-    .badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg, var(--accent), var(--accent2));box-shadow:var(--shadow)}
-    .menu{display:flex;gap:18px;font-size:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;background:linear-gradient(135deg, rgba(110,231,255,.18), rgba(179,136,255,.18));border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);cursor:pointer}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-vault{background:#e02424 !important;color:#fff !important;font-weight:800;border:2px solid #b91c1c;padding:14px 22px;font-size:1.1rem;border-radius:12px;box-shadow:0 8px 24px rgba(224,36,36,.25)}
-    .btn-vault:hover{background:#b91c1c !important;transform:scale(1.05)}
-    .hero{padding:40px 0 24px}
-    .panel{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .card{background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    h1{font-size:34px;line-height:1.15;margin:0 0 10px}
-    h2{margin:0 0 12px;font-size:22px}
-    h3{margin:18px 0 8px;font-size:18px}
-    .lead{color:var(--muted);font-size:16px;margin:0 0 18px}
-    .kicker{font-size:12px;letter-spacing:.18em;color:var(--warn);text-transform:uppercase;margin-bottom:10px}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .pill{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
-    section{padding:28px 0}
-    .small{font-size:13px;color:var(--muted)}
-    .video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden}
-    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    footer{padding:40px 0 70px;color:var(--muted);font-size:13px}
-    .grid-2{display:grid;gap:16px}
-    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-    /* Print brief */
-    @media print{ header,.no-print{display:none!important} body{background:#fff;color:#111} .panel,.card{border-color:#bbb;box-shadow:none} .print-brief{display:block!important} }
-    .print-brief{display:none}
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 0.8rem;
+    }
+    iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      margin: 1rem 0;
+    }
+    /* ——— Evidence Vault Button Style ——— */
+    .btn-vault {
+      background: #e02424 !important;
+      color: #fff !important;
+      font-weight: 700;
+      border: 2px solid #b91c1c;
+      padding: 14px 22px;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(224,36,36,.25);
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+      margin-top: 1rem;
+    }
+    .btn-vault:hover {
+      background: #b91c1c !important;
+      transform: scale(1.05);
+    }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="wrap nav">
-      <div class="brand"><div class="badge"></div> Justice for Ugwu</div>
-      <nav class="menu no-print">
-        <a href="#dedication">Dedication</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#petition">Petition</a>
-        <a href="#authorities">Authorities</a>
-        <a href="#brief">Case Brief</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Open Evidence Vault</a>
-      </nav>
-    </div>
+    <h1>Justice For Ugwu</h1>
+    <p>A Survivor's Platform for Truth and Tools</p>
   </header>
 
-  <main class="wrap">
-    <!-- DEDICATION -->
-    <section id="dedication">
-      <div class="card" style="text-align:center">
-        <div class="kicker">Dedication</div>
-        <h2 style="margin:0 0 12px;font-size:24px;color:#ffd479;">To God Almighty, who delivers the oppressed and restores justice.</h2>
-        <blockquote style="font-style:italic;margin:12px auto;max-width:700px;color:#8ef0b6;">
-          “Contend, Lord, with those who contend with me; fight against those who fight against me.”
-          <br><span style="font-size:14px;color:#b9c2cf;">— Psalm 35:1</span>
-        </blockquote>
-        <p class="lead" style="margin-top:12px">
-          <strong>Prayer:</strong> Righteous Father, You see what is done in secret. Let truth speak louder than labels,
-          let evidence silence lies, and let justice roll like a river for every survivor who reads this page and for me,
-          Onyebuchi Michael Ugwu. Guard my mind, preserve my voice, and move every authority to act with courage and integrity. Amen.
-        </p>
-        <div class="cta">
-          <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Enter Evidence Vault</a>
-        </div>
-      </div>
-    </section>
+  <main>
 
-    <!-- HERO VIDEOS -->
+    <!-- Dedication -->
     <section>
-      <div class="grid-2">
-        <div class="panel">
-          <div class="kicker">Home Video</div>
-          <h2>My Appeal for Justice</h2>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/bFMg-sz_nss?si=j9gAPz0PcPd0ksds" title="Home Video" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="kicker">DG NAPTIP</div>
-          <h2>Follow-up Message to Director-General</h2>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/SfLSDA-uEuU" title="DG NAPTIP Short" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-        </div>
-      </div>
+      <h2>Dedication</h2>
+      <p><strong>“The Lord is my light and my salvation; whom shall I fear? 
+      The Lord is the strength of my life; of whom shall I be afraid?”</strong> — Psalm 27:1</p>
+      <p>I dedicate this testimony to God Almighty. May everyone who hears my unusual story know that truth cannot be erased. This site is my cry for justice, my evidence for the world, and my prayer for freedom and accountability.</p>
     </section>
 
-    <!-- TIMELINE -->
-    <section id="timeline">
-      <div class="panel">
-        <div class="kicker">Timeline</div>
-        <h2>How the Crime Began in Nigeria and Continued in the U.S.</h2>
-        <h3>1) Nigeria — Origin of the Crime</h3>
-        <ul>
-          <li>Estate fraud and forged filings triggered coercion and a <strong>forced removal</strong> from Nigeria.</li>
-          <li>A one-way flight and a letter signed under duress were used to displace me and suppress inheritance claims.</li>
-          <li><em>Jurisdiction:</em> Within the mandates of <strong>NAPTIP</strong> (trafficking) and <strong>EFCC</strong> (financial crimes).</li>
-        </ul>
-        <h3>2) Cross-Border Transition</h3>
-        <ul>
-          <li>The crime crossed into the United States, triggering duties of <strong>HSI</strong> and the <strong>FBI</strong> to coordinate with Nigeria.</li>
-          <li>Cross-border trafficking is a continuing offense; travel does not extinguish it.</li>
-        </ul>
-        <h3>3) United States — Continuation</h3>
-        <ul>
-          <li>Attempts to label me “unstable” were used to deflect from documents and timelines.</li>
-          <li>Institutional actions formed part of the ongoing offense that began in Nigeria.</li>
-          <li><em>Duty:</em> U.S. authorities must request verification from <strong>NAPTIP/EFCC</strong> of the Nigerian root facts.</li>
-        </ul>
-        <h3>4) Today — Ongoing Violation</h3>
-        <ul>
-          <li>Until my rights and inheritance are restored, the harm persists.</li>
-          <li>This public record removes plausible deniability for any official who claims “no jurisdiction.”</li>
-        </ul>
-        <div class="cta">
-          <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Open Evidence Vault</a>
-        </div>
-      </div>
+    <!-- My Story -->
+    <section>
+      <h2>My Story: From Survivor to Advocate</h2>
+      <iframe src="https://www.youtube.com/embed/bFMg-sz_nss?si=j9gAPz0PcPd0ksds" 
+              title="Justice For Ugwu - My Story Video"
+              allowfullscreen></iframe>
     </section>
 
-    <!-- PETITION -->
-    <section id="petition">
-      <div class="panel">
-        <div class="kicker">Public Petition</div>
-        <h2>This is Your Jurisdiction — and Your Duty</h2>
-        <p class="small">Cross-border trafficking rooted in fraud and forgery is a continuing offense. Nigerian and U.S. agencies have a duty to investigate, coordinate, and verify facts across borders. Written responses with a case number and points of contact are requested.</p>
-
-        <h3>Requests to Nigerian Authorities</h3>
-        <ul>
-          <li><strong>NAPTIP (National Agency for the Prohibition of Trafficking in Persons):</strong> Open/continue trafficking investigation recognizing the Nigerian origin (coercion, forced removal, displacement); coordinate with U.S. counterparts.</li>
-          <li><strong>EFCC (Economic & Financial Crimes Commission):</strong> Investigate financial crimes and forgeries connected to the trafficking; liaise with NAPTIP/HSI/FBI.</li>
-          <li><strong>Enugu State Judiciary / Ministry of Justice:</strong> Ensure access to justice and due process for filings arising from the estate fraud and forged documents; provide certified records and case status.</li>
-          <li><strong>CAC (Corporate Affairs Commission):</strong> Provide certified company records; investigate filings where public/shareholder interests are implicated (patterns of forgery/misrepresentation).</li>
-          <li><strong>NBA / LPDC (Nigerian Bar Association & Legal Practitioners Disciplinary Committee):</strong> Where lawyers facilitated or ignored forgery/duress, receive and process complaints under professional rules.</li>
-        </ul>
-
-        <h3>Requests to U.S. Authorities</h3>
-        <ul>
-          <li><strong>HSI / FBI:</strong> Investigate the U.S. continuation (a continuing offense) and formally verify Nigerian root facts with NAPTIP/EFCC.</li>
-          <li><strong>Local Law Enforcement:</strong> Preserve records; do not substitute character labels for evidence; coordinate with federal counterparts.</li>
-        </ul>
-
-        <h3>Accountability Standard</h3>
-        <ul>
-          <li>Respond in writing with a case number, points of contact, and confirmation of inter-agency coordination.</li>
-          <li>Silence or dismissal will be logged on this public record.</li>
-        </ul>
-
-        <div class="cta">
-          <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Open Evidence Vault</a>
-          <a class="btn" href="#authorities">Authorities & Channels</a>
-        </div>
-      </div>
+    <!-- Plea to DG NAPTIP -->
+    <section>
+      <h2>Urgent Plea to DG NAPTIP</h2>
+      <iframe src="https://www.youtube.com/embed/SfLSDA-uEuU" 
+              title="Urgent Plea to DG NAPTIP"
+              allowfullscreen></iframe>
     </section>
 
-    <!-- AUTHORITIES & CHANNELS -->
-    <section id="authorities">
-      <div class="panel">
-        <div class="kicker">Authorities & Channels</div>
-        <h2>Where to Verify, File, and Act</h2>
-        <p class="small">Official portals for verification, filings, and professional accountability—so that investigators, regulators, and the legal profession act without delay.</p>
-
-        <h3>Nigeria — Federal</h3>
-        <ul>
-          <li><strong>NAPTIP:</strong> <a href="https://naptip.gov.ng/about-us/" target="_blank" rel="noopener">Agency mandate</a> · <a href="https://naptip.gov.ng/investigation-monitoring-department/" target="_blank" rel="noopener">Investigation & Monitoring</a></li>
-          <li><strong>EFCC:</strong> <a href="https://www.efcc.gov.ng/efcc/about-us-new/the-establishment-act" target="_blank" rel="noopener">Establishment Act</a> · <a href="https://www.efcc.gov.ng/" target="_blank" rel="noopener">Official site</a></li>
-          <li><strong>CAC (Corporate Affairs Commission):</strong> <a href="https://www.cac.gov.ng/functions/" target="_blank" rel="noopener">Functions</a> · <a href="https://pre.cac.gov.ng/home" target="_blank" rel="noopener">Public search portal</a></li>
-        </ul>
-
-        <h3>Nigeria — State</h3>
-        <ul>
-          <li><strong>Enugu State Judiciary:</strong> <a href="https://judiciary.en.gov.ng/" target="_blank" rel="noopener">Official website</a> · <a href="https://investment.enugustate.gov.ng/docs/serap/MANDATE-MINISTRY-OF-JUSTICE.pdf" target="_blank" rel="noopener">MoJ mandate (PDF)</a></li>
-        </ul>
-
-        <h3>Legal Profession</h3>
-        <ul>
-          <li><strong>Nigerian Bar Association (NBA):</strong> <a href="https://www.nigerianbar.org.ng/" target="_blank" rel="noopener">Official site</a> · <a href="https://www.nigerianbar.org.ng/find-a-lawyer" target="_blank" rel="noopener">Find a Lawyer</a></li>
-          <li><strong>LPDC (Legal Practitioners Disciplinary Committee):</strong> <a href="https://bob.gov.ng/legal-practitioners-disciplinary-committee/" target="_blank" rel="noopener">Disciplinary process</a></li>
-        </ul>
-
-        <h3>United States</h3>
-        <ul>
-          <li><strong>HSI (Homeland Security Investigations):</strong> <a href="https://www.ice.gov/hsi" target="_blank" rel="noopener">Official site</a></li>
-          <li><strong>FBI — Human Trafficking:</strong> <a href="https://www.fbi.gov/investigate/violent-crime/human-trafficking" target="_blank" rel="noopener">Investigation page</a></li>
-        </ul>
-
-        <div class="cta">
-          <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Open Evidence Vault</a>
-        </div>
-      </div>
+    <!-- Evidence Vault -->
+    <section>
+      <h2>Evidence Vault</h2>
+      <p>All case documentation, public records, and legal evidence have been preserved here for transparency and for immediate review by investigators, authorities, and my family.</p>
+      <a href="https://app--justice-for-ugwu-41980093.base44.app/Locker"
+         class="btn-vault"
+         target="_blank"
+         rel="noopener">
+        🚨 Evidence Vault
+      </a>
     </section>
 
-    <!-- CASE BRIEF (printable) -->
-    <section id="brief">
-      <div class="panel">
-        <div class="kicker">One-Page</div>
-        <h2>Case Brief (Share/Print)</h2>
-        <p>Use the button below to print or save as PDF. This brief includes a concise summary and an exhibit index linking to the Evidence Vault.</p>
-        <button class="btn no-print" id="printBriefBtn2">Download Case Brief (PDF)</button>
-
-        <div class="print-brief">
-          <h2>Justice for Ugwu — Case Brief</h2>
-          <p><strong>Summary:</strong> A trafficking chain began in Nigeria through estate fraud and forgery, resulting in my forced removal. The crime crossed into the United States and continued through institutional actions intended to discredit me. This is a continuing offense. Authorities in both countries are duty-bound to investigate and coordinate.</p>
-          <h3>Timeline (Condensed)</h3>
-          <ol>
-            <li><strong>Nigeria:</strong> Fraud/forgery → coercion → forced removal (one-way flight; letter under duress).</li>
-            <li><strong>Cross-Border:</strong> Crime moved into the U.S., triggering international cooperation duties.</li>
-            <li><strong>United States:</strong> Continuation via institutional actions and framing attempts.</li>
-            <li><strong>Today:</strong> Ongoing harm; public petition; formal exhibits available for verification.</li>
-          </ol>
-          <h3>Action Requests</h3>
-          <ul>
-            <li><strong>NAPTIP:</strong> Acknowledge origin and open/continue investigation.</li>
-            <li><strong>EFCC:</strong> Investigate financial crimes/forgery connected to the trafficking.</li>
-            <li><strong>HSI/FBI:</strong> Investigate continuation and liaise with NAPTIP/EFCC.</li>
-            <li><strong>Local LE:</strong> Preserve records and coordinate with federal agencies.</li>
-          </ul>
-          <h3>Exhibits (see Evidence Vault)</h3>
-          <ul>
-            <li>Exhibit A — Certified corporate filings showing forgery patterns.</li>
-            <li>Exhibit B — Barclays indemnity document.</li>
-            <li>Exhibit C — Undertaking signed under duress.</li>
-            <li>Exhibit D — Legal opinion on administrative illegality and fraud.</li>
-            <li>Exhibit E — Prior petitions to NAPTIP/EFCC and proof of silence.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="panel">
-        <div class="kicker">About</div>
-        <h2>About Justice for Ugwu</h2>
-        <p>This site is a trauma-informed, distraction-free public record. It exists to protect me, preserve the truth, and provide investigators with organized, verifiable evidence. It is addressed to <strong>NAPTIP, EFCC, HSI, and the FBI</strong>, and to any official with a duty to cooperate across borders.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="panel">
-        <div class="kicker">Contact</div>
-        <h2>Contact</h2>
-        <p class="small">For investigators and authorities: please send a written response with a case number and a point of contact. For secure delivery of large files, request a time-limited link.</p>
-        <div class="cta">
-          <a class="btn" href="mailto:?subject=Justice for Ugwu — Case Coordination&body=Please provide a case number and POC for coordination with NAPTIP/EFCC/HSI/FBI.">Email for Coordination</a>
-          <a class="btn btn-vault" href="https://app.base44.com/apps/689cc4e24014a00241980093/editor/preview/Locker" target="_blank" rel="noopener">Open Evidence Vault</a>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <footer class="wrap">
-    <div>© <span id="year"></span> Justice for Ugwu · Public Evidence Hub</div>
-    <div class="small">Sitemap: <a href="/sitemap.xml">/sitemap.xml</a> · robots: <a href="/robots.txt">/robots.txt</a></div>
-  </footer>
-
-  <!-- Minimal JS -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const printBtns = [document.getElementById('printBriefBtn2')].filter(Boolean);
-    printBtns.forEach(b => b.addEventListener('click', () => window.print()));
-  </script>
 </body>
 </html>
