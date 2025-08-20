@@ -5,8 +5,8 @@
       "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker"
     },
     {
-      "source": "/vault/(.*)",
-      "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker/$1"
+      "source": "/vault/:path*",
+      "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker/:path*"
     }
   ],
   "headers": [
