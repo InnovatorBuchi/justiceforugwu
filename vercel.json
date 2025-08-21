@@ -1,18 +1,13 @@
 {
   "rewrites": [
-    { "source": "/vault", "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker" },
-    { "source": "/rw.js", "destination": "https://app--justice-for-ugwu-41980093.base44.app/rw.js" },
-    { "source": "/vendors/:match*", "destination": "https://app--justice-for-ugwu-41980093.base44.app/vendors/:match*" },
-    { "source": "/main/:match*", "destination": "https://app--justice-for-ugwu-41980093.base44.app/main/:match*" },
-    { "source": "/manifest.json", "destination": "https://app--justice-for-ugwu-41980093.base44.app/manifest.json" },
-    { "source": "/favicon.ico", "destination": "https://app--justice-for-ugwu-41980093.base44.app/favicon.ico" }
+    { "source": "/vault",            "destination": "https://app--justice-for-ugwu-41980093.base44.app/Locker" },
+    { "source": "/static/:path*",    "destination": "https://app--justice-for-ugwu-41980093.base44.app/static/:path*" },
+    { "source": "/main/:path*",      "destination": "https://app--justice-for-ugwu-41980093.base44.app/main/:path*" },
+    { "source": "/vendors/:path*",   "destination": "https://app--justice-for-ugwu-41980093.base44.app/vendors/:path*" },
+    { "source": "/manifest.json",    "destination": "https://app--justice-for-ugwu-41980093.base44.app/manifest.json" },
+    { "source": "/favicon.ico",      "destination": "https://app--justice-for-ugwu-41980093.base44.app/favicon.ico" }
   ],
   "headers": [
-    {
-      "source": "/vault",
-      "headers": [
-        { "key": "x-robots-tag", "value": "noindex" }
-      ]
-    }
+    { "source": "/vault", "headers": [{ "key": "x-robots-tag", "value": "noindex" }] }
   ]
 }
